@@ -1,0 +1,22 @@
+{
+  "name": "gardeners-jazz-website",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "fullpage.js": "~2.7.3",
+    "modernizr": "~2.8.1"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "~3.3.0",
+    "mocha": "~2.3.3"
+  }
+}
