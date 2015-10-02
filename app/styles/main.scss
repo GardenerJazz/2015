@@ -45,8 +45,7 @@ $icon-font-path: '../fonts/';
   }
 
   .menu-items {
-
-
+    display: inline-block;
     li {
       display: inline-block;
       list-style: none;
@@ -73,10 +72,41 @@ $icon-font-path: '../fonts/';
 
     }
   }
+
+  .social-media {
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+
+    div {
+      display: inline-block;
+      color: #fff;
+      font-family: 'Roboto';
+      font-weight: 300;
+      line-height: $menu-height;
+      margin-right: 30px;
+    }
+
+    .facebook::before, .twitter::before {
+      display: inline-block;
+      content: "";
+      height: 20px;
+      width: 20px;
+    }
+
+    .facebook::before {
+      background: url(../images/icon-fb.png) no-repeat;
+      transform: translateY(5px);
+    }
+    .twitter::before {
+      background: url(../images/icon-twitter.png) no-repeat;
+      transform: translateX(-5px) translateY(5px);
+    }
+  }
 }
 
 .section {
-  background: $dark-grey-blue url("../images/pattern.png");
+  background: $dark-grey-blue url(../images/pattern.png);
 }
 
 .acasa {
@@ -147,6 +177,69 @@ $icon-font-path: '../fonts/';
   }
 }
 
+.artisti {
+  h1 {
+    color: #fff;
+    font-family: 'Katahdin';
+    font-size: 23px;
+    text-align: center;
+  }
+
+  .artists-box {
+    $slot-dimension: 260px;
+
+    font-size: 0;
+    margin: 0 auto;
+    max-width: $slot-dimension * 3;
+
+    .slot {
+      display: inline-block;
+      height: $slot-dimension;
+      width: $slot-dimension;
+      background-size: auto 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease;
+
+      .details {
+        background: $dark-slate-blue-90;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        background-size: auto 130%;
+      }
+    }
+
+    .slot-1 {
+      background-image: url("../images/pics/photo-ACQuartet.jpg");
+    }
+    .slot-2 {
+      background-image: url("../images/pics/photo-elenaMorariu.jpg");
+    }
+    .slot-3 {
+      background-image: url("../images/pics/photo-HotClub.jpg");
+    }
+    .slot-4 {
+      background-image: url("../images/pics/photo-OpisBand.jpg");
+    }
+    .slot-5 {
+      background-image: url("../images/pics/photo-sorinRomanescu.jpg");
+    }
+    .slot-6 {
+      background-image: url("../images/pics/photo-vioricaPintilie.jpg");
+    }
+  }
+}
+
 .next-page {
   bottom: 50px;
   color: $yellowish;
@@ -154,7 +247,14 @@ $icon-font-path: '../fonts/';
   font-family: 'Adam';
   font-size: 12px;
   left: 50%;
+  opacity: 1;
   position: absolute;
   text-align: center;
   transform: translateX(-50%);
+  transition: all 0.5s ease;
+
+  &.go-away {
+    opacity: 0;
+  }
+
 }
