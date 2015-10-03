@@ -1,0 +1,69 @@
+@import "colors";
+
+.acasa {
+  background: $dark-grey-blue url("../images/trumpet.png");
+  background-repeat: no-repeat;
+
+  .home-wrapper {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    float: left;
+    opacity: 0;
+
+    animation: fade-in 0.5s ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .logo, .details-wrapper, .artists-wrapper {
+    float:left;
+  }
+
+  .logo {
+    transform: translateX(20px) translateY(-50px);
+  }
+
+  .details-wrapper {
+    font-family: 'Katahdin';
+    margin-right: 50px;
+    //transform: translateX(-20px) translateY(50px);
+
+    .fest-name {
+      color: $tealish;
+      font-size: 26px;
+    }
+
+    .fest-date {
+      color: $yellowish;
+      font-size: 24px;
+    }
+
+    .fest-place {
+      color: $sea;
+      font-size: 17px;
+    }
+  }
+
+  .artists-wrapper {
+    max-width: 400px;
+
+    .artist-name {
+      color: $dark-grey-blue;
+      background: $yellowish;
+      border-radius: 30px;
+      font-family: 'Katahdin';
+      font-size: 16px;
+      padding: 5px 20px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      line-height: 15px;
+      display: inline-block;
+    }
+  }
+}

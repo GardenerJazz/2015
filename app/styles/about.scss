@@ -1,0 +1,78 @@
+@import "colors";
+
+.despre-festival {
+  position: relative;
+  .box {
+
+    $box-height: 500px;
+
+    background: $dark-grey-blue;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    height: $box-height;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+
+    .half {
+      float: left;
+      width: 50%;
+      height: 100%;
+
+      &:first-child {
+        border-left: 5px solid $yellowish;
+      }
+    }
+
+    h1 {
+      color: $yellowish;
+      font-family: 'Katahdin';
+      font-size: 16px;
+      margin-left: 20px;
+    }
+
+    p {
+      font-family: 'Roboto';
+      font-weight: 300;
+      color: #fff;
+      font-size: 13px;
+      padding: 10px 20px;
+    }
+
+    .slide, .slide > div {
+      height: $box-height !important;
+    }
+  }
+
+
+
+  #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span,
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    height: 9px;
+    width: 9px;
+    margin: 0;
+    opacity: 0.5;
+    background: #fff;
+  }
+
+  #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
+    opacity: 1;
+  }
+
+  #fp-nav ul li, .fp-slidesNav ul li {
+    margin: 5px;
+  }
+
+  .gallery {
+    position: relative;
+
+    .fp-slidesNav {
+      bottom: 10px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@import "colors";
+
+.artisti {
+  h1 {
+    color: #fff;
+    font-family: 'Katahdin';
+    font-size: 23px;
+    text-align: center;
+  }
+
+  .artists-box {
+    $slot-dimension: 260px;
+
+    font-size: 0;
+    margin: 0 auto;
+    max-width: $slot-dimension * 3;
+
+    .slot {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      display: inline-block;
+      height: $slot-dimension;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease;
+      width: $slot-dimension;
+
+      .artist-name {
+        color: $yellowish;
+        font-family: 'Katahdin';
+        font-size: 16px;
+        opacity: 1;
+        position: absolute;
+        padding: 10px;
+        width: 100%;
+        transition: all 0.3s ease;
+      }
+
+      & > .artist-name {
+        background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.6));
+        bottom: 0px;
+      }
+
+      &:hover > .artist-name {
+        opacity: 0;
+        bottom: -30px;
+      }
+
+      .details {
+        background: $dark-slate-blue-90;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s ease;
+        width: 100%;
+
+        .artist-name {
+          top: -30px;
+        }
+
+        .info {
+          color: #fff;
+          font-family: "Roboto";
+          font-size: 13px;
+          opacity: 0;
+          padding: 16px;
+          position: absolute;
+          top: -100px;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          opacity: 1;
+
+          .artist-name {
+            top: 0px;
+          }
+
+          .info {
+            opacity: 1;
+            top: 30px;
+          }
+        }
+      }
+
+      &:hover {
+        background-size: auto 130%;
+      }
+    }
+
+    .slot-1 {
+      background-image: url("../images/pics/photo-ACQuartet.jpg");
+    }
+    .slot-2 {
+      background-image: url("../images/pics/photo-elenaMorariu.jpg");
+    }
+    .slot-3 {
+      background-image: url("../images/pics/photo-HotClub.jpg");
+    }
+    .slot-4 {
+      background-image: url("../images/pics/photo-OpisBand.jpg");
+    }
+    .slot-5 {
+      background-image: url("../images/pics/photo-sorinRomanescu.jpg");
+    }
+    .slot-6 {
+      background-image: url("../images/pics/photo-vioricaPintilie.jpg");
+    }
+  }
+}
