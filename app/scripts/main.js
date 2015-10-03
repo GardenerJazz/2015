@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var pages = ['acasa', 'despreFestival', 'artisti', 'program', 'parteneri'];
+  var pages = ['acasa', 'despreFestival', 'artisti', 'program', 'parteneri', 'contact'];
 
   $('#fullpage').fullpage({
     anchors: pages,
@@ -47,6 +47,10 @@ $(document).ready(function() {
 
     if (nextIndex === 4) {
       nextPageText.text('Parteneri');
+    }
+
+    if (nextIndex === 5) {
+      nextPageText.text('Contact');
     }
   }
 
