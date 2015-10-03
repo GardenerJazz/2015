@@ -9,7 +9,7 @@
   }
 
   .artists-box {
-    $slot-dimension: 260px;
+    $slot-dimension: 230px;
 
     font-size: 0;
     margin: 0 auto;
@@ -56,6 +56,7 @@
 
         .artist-name {
           top: -30px;
+          opacity: 0;
         }
 
         .info {
@@ -74,6 +75,7 @@
 
           .artist-name {
             top: 0px;
+            opacity: 1;
           }
 
           .info {
