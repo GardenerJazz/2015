@@ -1,0 +1,57 @@
+@import "variables";
+@import "colors";
+
+@media (max-width: 1024px) {
+  #menu {
+    .logo {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .menu-items {
+      padding: 0;
+    }
+
+    .social-media {
+      right: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #menu {
+    .menu-items  {
+      background: $dark-slate-blue;
+      border-bottom: 1px solid $tealish-30;
+      position: absolute;
+      left:0;
+      top: $menu-height;
+      width: 100%;
+
+      &.collapsed {
+        display: none;
+      }
+
+      li {
+        display: block;
+        line-height: 40px;
+
+        margin-right: 0;
+        transition: all 0.3s ease;
+
+        a {
+          padding-left: 30px;
+          display: block;
+        }
+
+        &.active {
+          background: rgba(255, 255, 255, 0.07);
+        }
+      }
+    }
+    
+    .drawer-btn {
+      display: block;
+    }
+  }
+}

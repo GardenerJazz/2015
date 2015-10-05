@@ -10,10 +10,6 @@ $(document).ready(function() {
     onLeave: onLeaveHandler
   });
 
-  $('.next-page').on('click', function(event) {
-    $.fn.fullpage.moveSectionDown();
-  });
-
   function onLeaveHandler(index, nextIndex, direction) {
 
     var nextPageText = $('.next-page-text');
@@ -61,4 +57,13 @@ $(document).ready(function() {
 
     gallery.append(slidesNav.remove());
   }
+
+  document.querySelector('.next-page').addEventListener('click', function(event) {
+    $.fn.fullpage.moveSectionDown();
+  });
+
+  document.querySelector('.drawer-btn').addEventListener('click', function(event) {
+    var menuItems = $('.menu-items');
+    menuItems.toggleClass('collapsed');
+  });
 });
