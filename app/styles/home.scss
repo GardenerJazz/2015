@@ -1,3 +1,4 @@
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
 @import "colors";
 
 .acasa {
@@ -21,17 +22,31 @@
     100% { opacity: 1; }
   }
 
-  .logo, .details-wrapper, .artists-wrapper {
+  .logo-wrapper {
+    white-space: nowrap;
+    position: relative;
+    transform: translateY(-50%);
+    top: 184px;
+
+    @media (max-width: $screen-sm-min) {
+      top: 0;
+      transform: none;
+    }
+  }
+
+  .artists-wrapper {
     float:left;
   }
 
   .logo {
-    transform: translateX(20px) translateY(-50px);
+    transform: translateX(20px) translateY(-60px);
+    display: inline-block;
   }
 
   .details-wrapper {
     font-family: 'Katahdin';
     margin-right: 50px;
+    display: inline-block;
     //transform: translateX(-20px) translateY(50px);
 
     .fest-name {
@@ -51,7 +66,11 @@
   }
 
   .artists-wrapper {
-    max-width: 400px;
+    // max-width: 400px;
+    max-width: 500px;
+    @media (max-width: $screen-sm-min) {
+      text-align: center;
+    }
 
     .artist-name {
       color: $dark-grey-blue;
