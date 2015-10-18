@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "fullpage.js": "~2.7.3",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "isotope": "~2.2.2"
   },
   "overrides": {
     "bootstrap-sass": {
