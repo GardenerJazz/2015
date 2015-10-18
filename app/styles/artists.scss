@@ -10,10 +10,12 @@
 
   .artists-box {
     $slot-dimension: 200px;
+    $margin: 3px;
+    $columns: 3;
 
     font-size: 0;
     margin: 0 auto;
-    max-width: $slot-dimension * 3;
+    max-width: $slot-dimension * $columns + $columns * 2 * $margin;
 
     .slot {
       background-position: center;
@@ -25,6 +27,14 @@
       position: relative;
       transition: all 0.3s ease;
       width: $slot-dimension;
+      margin: $margin;
+
+      &.slot-big {
+        width: 1.5 * $slot-dimension;
+        height: 0.8 * $slot-dimension;
+        margin-left: $columns / 2 * $margin;
+        margin-right: $columns / 2 * $margin;
+      }
 
       .artist-name {
         color: $yellowish;
@@ -90,23 +100,31 @@
       }
     }
 
-    .slot-1 {
-      background-image: url("../images/pics/photo-ACQuartet.jpg");
+    .slot-alex-jaxx-smooth-band {
+      background-image: url("../images/artists/alex-jaxx-smooth-band.jpg");
     }
-    .slot-2 {
-      background-image: url("../images/pics/photo-elenaMorariu.jpg");
+    .slot-hot-club-de-bucharest {
+      background-image: url("../images/artists/hot-club-de-bucharest.jpg");
     }
-    .slot-3 {
-      background-image: url("../images/pics/photo-HotClub.jpg");
+    .slot-viorica-pintilie-trio {
+      background-image: url("../images/artists/viorica-pintilie-trio.jpg");
     }
-    .slot-4 {
-      background-image: url("../images/pics/photo-OpisBand.jpg");
+    .slot-a-c-leonte-quartet {
+      background-color: #18140b;
+      background-image: url("../images/artists/a-c-leonte-quartet.jpg");
     }
-    .slot-5 {
-      background-image: url("../images/pics/photo-sorinRomanescu.jpg");
+    .slot-sorin-romanescu-si-elena-morariu {
+      background-color: #000;
+      background-image: url("../images/artists/sorin-romanescu-si-elena-morariu.png");
     }
-    .slot-6 {
-      background-image: url("../images/pics/photo-vioricaPintilie.jpg");
+    .slot-hippie-music {
+      background-image: url("../images/artists/hippie-music.jpg");
+    }
+    .slot-opis-band {
+      background-image: url("../images/artists/opis-band.jpg");
+    }
+    .slot-andra-botez {
+      background-image: url("../images/artists/andra-botez.jpg");
     }
   }
 }
