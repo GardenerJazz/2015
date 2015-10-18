@@ -1,5 +1,9 @@
 @import "colors";
 
+$slot-dimension: 180px;
+$margin: 3px;
+$columns: 3;
+
 .artisti {
   h1 {
     color: #fff;
@@ -9,11 +13,8 @@
   }
 
   .artists-box {
-    $slot-dimension: 180px;
-    $margin: 3px;
-    $columns: 3;
-
     font-size: 0;
+    position: relative;
     margin: 0 auto;
     max-width: $slot-dimension * $columns + $columns * 2 * $margin;
 
@@ -34,6 +35,11 @@
         height: 0.8 * $slot-dimension;
         margin-left: $columns / 2 * $margin;
         margin-right: $columns / 2 * $margin;
+      }
+
+
+      .full-description {
+        display: none;
       }
 
       .artist-name {
@@ -128,4 +134,29 @@
       background-image: url("../images/artists/andra-botez.jpg");
     }
   }
+}
+
+.selected-slot-state  .artisti .artists-box {
+  .slot {
+    position: absolute;
+    transform: scale(0.001);
+    opacity: 0;
+
+    &.selected {
+      opacity: 1;
+      width: 100%;
+      height: 2.8 * $slot-dimension;
+      display: block;
+      transform: none;
+      position: relative;
+
+      .small-description {
+        display: none;
+      }
+      .full-description {
+        display: block;
+      }
+    }
+  }
+
 }
