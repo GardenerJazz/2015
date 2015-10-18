@@ -9,7 +9,7 @@
   }
 
   .artists-box {
-    $slot-dimension: 200px;
+    $slot-dimension: 180px;
     $margin: 3px;
     $columns: 3;
 
@@ -58,7 +58,8 @@
       }
 
       .details {
-        background: $dark-slate-blue-90;
+        // background: $dark-slate-blue-90;
+        background: $dark-slate-blue;
         height: 100%;
         opacity: 0;
         transition: all 0.3s ease;
@@ -90,7 +91,7 @@
 
           .info {
             opacity: 1;
-            top: 30px;
+            top: 40px;
           }
         }
       }
