@@ -1,5 +1,10 @@
 $(document).ready(function() {
+  fullPage();
+  // artists();
+});
 
+// funciton for full page init
+function fullPage() {
   var pages = ['acasa', 'despreFestival', 'artisti', 'program', 'parteneri', 'contact'];
 
   $('#fullpage').fullpage({
@@ -66,4 +71,9 @@ $(document).ready(function() {
     var menuItems = $('.menu-items');
     menuItems.toggleClass('collapsed');
   });
-});
+}
+
+// function that inits the artists module
+function artists() {
+
+}
