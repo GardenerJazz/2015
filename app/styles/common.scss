@@ -8,6 +8,10 @@
   padding: 0.2em 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $gray !important;
+}
+
 hr {
   border: 1px dashed #1FCEC0;
   margin: 10px 0;
@@ -20,6 +24,7 @@ hr {
 #menu {
 
   background: $dark-slate-blue;
+  background: $blue;
   border-bottom: 1px solid $tealish-30;
   position: fixed;
   top: 0;
@@ -54,7 +59,7 @@ hr {
 
       a {
         font-family: 'Roboto';
-        color: #fff;
+        color: $gray;
         font-size: 13px;
         text-decoration: none;
         font-weight: 500;
@@ -63,13 +68,11 @@ hr {
         &:hover {
           color: $yellowish;
         }
-
       }
 
       &.active a {
         color: $yellowish;
       }
-
     }
   }
 
@@ -87,25 +90,13 @@ hr {
       margin-right: 30px;
     }
 
-    .facebook::before, .twitter::before {
-      display: inline-block;
-      content: "";
-      height: 20px;
-      width: 20px;
-    }
-
     .facebook::before {
-      background: url(../images/icon-fb.png) no-repeat;
-      transform: translateY(5px);
-    }
-    .twitter::before {
-      background: url(../images/icon-twitter.png) no-repeat;
-      transform: translateX(-5px) translateY(5px);
+      transform: translateY(20px);
     }
   }
 
   .drawer-btn {
-    color: #fff;
+    color: $gray;
     float: right;
     display: none;
 
@@ -119,9 +110,32 @@ hr {
     }
   }
 }
+.email::before,
+.facebook::before,
+.twitter::before {
+  display: inline-block;
+  content: "";
+  height: 20px;
+  width: 20px;
+}
+
+.email::before {
+  background: url(../images/icon-email.png) no-repeat;
+  transform: translateY(6px) translateX(-5px);
+  background-size: cover;
+}
+.facebook::before {
+  background: url(../images/icon-fb-gray.png) no-repeat;
+  transform: translateY(5px);
+}
+.twitter::before {
+  background: url(../images/icon-twitter.png) no-repeat;
+  transform: translateX(-5px) translateY(5px);
+}
 
 .section {
-  background: $dark-grey-blue url(../images/pattern.png);
+  background: url(../images/pattern.png);
+  background-color: $blue;
 }
 
 .next-page {
