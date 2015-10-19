@@ -18,6 +18,13 @@
     .slot {
       display: inline-block;
       margin: 10px;
+      transition: all 300ms ease-out;
+
+      &:hover,
+      &:active {
+        transition: all 200ms ease-in;
+        transform: scale(1.1);
+      }
     }
   }
 }
