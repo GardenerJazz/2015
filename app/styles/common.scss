@@ -8,6 +8,15 @@
   padding: 0.2em 0;
 }
 
+hr {
+  border: 1px dashed #1FCEC0;
+  margin: 10px 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
 #menu {
 
   background: $dark-slate-blue;
