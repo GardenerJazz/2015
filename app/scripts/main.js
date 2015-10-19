@@ -1,5 +1,10 @@
 $(document).ready(function() {
+  fullPage();
+  artists();
+});
 
+// funciton for full page init
+function fullPage() {
   var pages = ['acasa', 'despreFestival', 'artisti', 'program', 'parteneri', 'contact'];
 
   $('#fullpage').fullpage({
@@ -66,4 +71,42 @@ $(document).ready(function() {
     var menuItems = $('.menu-items');
     menuItems.toggleClass('collapsed');
   });
-});
+}
+
+// function that inits the artists module
+function artists() {
+
+  // open the popup based on what slot is selected
+  $(window).on('hashchange', function() {
+    var artist = getArtistFromHash();
+
+    $('body').toggleClass('selected-slot-state', !!artist);
+    $('.slot').removeClass('selected');
+    if(artist) {
+      console.log(artist);
+      $('.slot')
+        .filter('.slot-' + artist)
+          .addClass('selected');
+    }
+  });
+
+  $('.section.artisti').on('click', function(e) {
+    if(getArtistFromHash()) {
+      location.hash = 'artisti';
+    }
+  });
+
+  function getHash() {
+    return location.toString().split('#')[1];
+  }
+
+  function getArtistFromHash() {
+    var hash = getHash();
+
+    if(hash.indexOf('artisti/') !== 0) {
+      return false;
+    }
+
+    return hash.replace(/^artisti\//, '');
+  }
+}
