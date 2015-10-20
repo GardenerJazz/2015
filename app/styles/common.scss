@@ -9,7 +9,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $gray !important;
+  //color: $gray !important;
 }
 
 hr {
@@ -24,7 +24,6 @@ hr {
 #menu {
 
   background: $dark-slate-blue;
-  background: $blue;
   border-bottom: 1px solid $tealish-30;
   position: fixed;
   top: 0;
@@ -59,7 +58,7 @@ hr {
 
       a {
         font-family: 'Roboto';
-        color: $gray;
+        color: #fff;
         font-size: 13px;
         text-decoration: none;
         font-weight: 500;
@@ -96,7 +95,7 @@ hr {
   }
 
   .drawer-btn {
-    color: $gray;
+    color: #fff;
     float: right;
     display: none;
 
@@ -135,7 +134,7 @@ hr {
 
 .section {
   background: url(../images/pattern.png);
-  background-color: $blue;
+  background-color: $dark-grey-blue;
 }
 
 .next-page {
@@ -162,4 +161,8 @@ h1 {
   text-align: center;
   font-family: 'Katahdin';
   font-size: 24px;
+}
+
+h5 {
+  color: #fff;
 }

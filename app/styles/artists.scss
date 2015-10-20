@@ -126,12 +126,23 @@ $columns: 3;
     }
     .slot-hippie-music {
       background-image: url("../images/artists/hippie-music.jpg");
+      background-size: auto 130%;
+
+      &:hover {
+        background-size: auto 150%;
+      }
     }
     .slot-opis-band {
       background-image: url("../images/artists/opis-band.jpg");
     }
     .slot-andra-botez {
       background-image: url("../images/artists/andra-botez.png");
+
+      background-size: auto 170%;
+
+      &:hover {
+        background-size: auto 190%;
+      }
     }
   }
 }
