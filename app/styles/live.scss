@@ -1,0 +1,29 @@
+@import "colors";
+
+.live {
+
+
+ .fp-slidesNav ul li a.active span,
+  .fp-slidesNav ul li a span {
+    height: 9px;
+    width: 9px;
+    margin: 0;
+    opacity: 0.5;
+    background: #fff;
+  }
+
+  .fp-slidesNav ul li a.active span {
+    opacity: 1;
+  }
+
+  .fp-slidesNav ul li {
+    margin: 5px;
+  }
+
+  .fp-slidesNav {
+    bottom: 75px;
+    // left: 50%;
+    // position: absolute;
+    // transform: translateX(-50%);
+  }
+}
