@@ -12,8 +12,14 @@ function fullPage() {
     menu: '#menu',
     slidesNavigation: true,
     controlArrows: false,
-    onLeave: onLeaveHandler
+    onLeave: onLeaveHandler,
+    afterLoad: afterLoadHandler
   });
+
+  function afterLoadHandler (pageName) {
+    // ga('set', 'page', '/#' + pageName);
+    ga('send', 'pageview', '/#' + pageName);
+  }
 
   function onLeaveHandler(index, nextIndex, direction) {
 
