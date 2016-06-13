@@ -1,3 +1,6 @@
 <h1>
   {{title}}
+  <div *ngFor="let band of bands">
+    <band [band]=band></band>
+  </div>
 </h1>
